@@ -1,4 +1,4 @@
-# 🛒 Project 8: Retail Sales Executive Analytics Dashboard
+# 🛒 Project 8: Retail Sales Dashboard
 
 <p align="left">
   <img src="https://img.shields.io/badge/Domain-Retail%20BI-blue?style=for-the-badge" />
@@ -6,32 +6,29 @@
   <img src="https://img.shields.io/badge/Visualization-Plotly%20Interactive-green?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-In modern retail, real-time data visibility drives profitability. The **Retail Sales Executive Analytics Dashboard** is an interactive web-based Business Intelligence application built with **Streamlit** and **Plotly**. It ingests transactional sales data and transforms it into actionable executive KPIs, geographical performance maps, category revenue breakdowns, and seasonal demand trends.
+## 📋 Project Overview
+In this project, I built an interactive web dashboard to visualize retail sales data. Using Python, Streamlit, and Plotly, I created a tool that lets users explore revenue, profits, and sales trends across different regions and product categories.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_8_Retail_Sales_Dashboard/
-├── app.py                     # Streamlit dashboard application code
+├── app.py                     # My Streamlit dashboard script
 ├── data/
-│   └── retail_sales.csv       # Transactional retail records (Revenue, Profit, Category, Region)
+│   └── retail_sales.csv       # The dataset I used
 ├── notebooks/
-│   └── Sales_EDA.ipynb        # In-depth exploratory data analysis & aggregations
+│   └── Sales_EDA.ipynb        # Where I cleaned and analyzed the data first
 ├── requirements.txt           # Dependencies
-└── README.md                  # Project documentation
+└── README.md                  # This file
 ```
 
 ---
 
-## 🌟 Dashboard Key Features
-* **🎯 Real-Time KPI Cards**: Dynamic calculation of Total Revenue, Total Net Profit, Total Units Sold, and Average Order Value (AOV).
-* **🔍 Interactive Sidebar Filters**: Slice and dice metrics instantly by geographical region (*North, South, East, West*) and product category (*Electronics, Clothing, Furniture, Groceries*).
-* **📈 Multi-Dimensional Charts**:
-  * **Monthly Revenue Trajectory**: Interactive Plotly line charts capturing seasonal demand peaks.
-  * **Category Profitability**: Bar charts comparing gross revenue against net margins per department.
-  * **Regional Performance Distribution**: Sunburst charts and pie charts highlighting top-performing territories.
+## 🌟 What I Built
+* **Real-Time KPI Cards**: Showcasing total revenue, total profit, and average order value.
+* **Interactive Filters**: Users can filter the data by region (e.g., North, South) and category (e.g., Electronics, Clothing).
+* **Interactive Charts**: I used Plotly to create line charts for monthly revenue trends, bar charts for category profitability, and pie charts for regional performance.
 
 ---
 
@@ -42,8 +39,8 @@ Project_8_Retail_Sales_Dashboard/
 pip install -r requirements.txt
 ```
 
-### 2. Launch Streamlit Executive Dashboard
+### 2. Launch the Dashboard
 ```bash
 streamlit run app.py
 ```
-Open your web browser at `http://localhost:8501`. Use the interactive sidebar to filter by region or product category and observe instantaneous KPI updates.
+Open your web browser at `http://localhost:8501`. Try using the sidebar to filter the data and watch the charts update!

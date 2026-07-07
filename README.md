@@ -1,4 +1,4 @@
-# 🚀 Data Science & AI/ML — Complete Internship & Capstone Portfolio
+# 🚀 Data Science & AI/ML — Internship Portfolio
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -9,30 +9,30 @@
   <img src="https://img.shields.io/badge/Status-Complete-success?style=for-the-badge" />
 </p>
 
-> **An exhaustive, industry-grade Data Science and Artificial Intelligence repository** documenting a structured **45-Day Intensive Training Curriculum (GRRAS Solutions SITP)** alongside a portfolio of **9 Full-Stack ML/AI Capstone Projects** featuring end-to-end data pipelines, exploratory data analysis, predictive modeling, deep learning, and interactive web deployment.
+> A complete portfolio of my 45-day summer internship training at GRRAS Solutions, featuring my daily learning progress and 9 capstone machine learning projects.
 
 ---
 
-## 🌟 Executive Summary
+## 🌟 About My Internship
 
-This repository represents the synthesis of foundational programming, statistical data analysis, and advanced machine learning engineering. It is structured into two core pillars:
+During this internship, I learned the core concepts of Python programming, data analysis, and machine learning. The repository contains everything I worked on, divided into two main parts:
 
-1. **🎓 GRASS Training Curriculum (`GRASS/`)**: A chronological 45-day intensive learning path covering Python fundamentals, Object-Oriented Programming, data manipulation, visualization, regression, classification, and Streamlit dashboards.
-2. **🏆 9 Industry Capstone Projects (`Projects/`)**: Production-ready, full-stack Data Science and AI/ML applications solving real-world business problems across e-commerce, finance, entertainment, automotive, and telecommunications.
+1. **🎓 GRASS Training Modules (`GRASS/`)**: My daily practice files covering Python basics, Object-Oriented Programming, data manipulation with Pandas, and data visualization.
+2. **🏆 9 Capstone Projects (`Projects/`)**: The 9 end-to-end machine learning projects I built to apply what I learned to real-world datasets.
 
 ---
 
-## 🗂️ Universal Repository Architecture
+## 🗂️ Repository Structure
 
 ```
 📦 Data-Science-AI-ML-SITP
-├── 📂 GRASS/                           # 45-Day Training & Practice Modules
-│   ├── 📜 Day_1.py to Day_19.py        # Python Core, OOP, Data Structures
-│   ├── 📓 Day_20.ipynb to Day_34.ipynb # Advanced ML, EDA & Statistical Modeling
-│   ├── 📊 *.csv, *.json, *.xlsx        # Training Datasets & Assets
-│   └── 🖥️ app.py                       # Streamlit E-Commerce Dashboard
+├── 📂 GRASS/                           # My 45-Day Training & Practice Files
+│   ├── 📜 Day_1.py to Day_19.py        # Python Basics, OOP, Data Structures
+│   ├── 📓 Day_20.ipynb to Day_34.ipynb # ML Algorithms, EDA & Stats
+│   ├── 📊 *.csv, *.json, *.xlsx        # Datasets I used for practice
+│   └── 🖥️ app.py                       # Simple Streamlit Dashboard
 │
-└── 📂 Projects/                        # 9 Complete Industry Capstone Projects
+└── 📂 Projects/                        # My 9 Machine Learning Projects
     ├── 📁 Project_1_Bike_Price_Prediction/
     ├── 📁 Project_2_Population_Growth_Forecasting/
     ├── 📁 Project_3_Movie_Recommendation_System/
@@ -46,53 +46,52 @@ This repository represents the synthesis of foundational programming, statistica
 
 ---
 
-## 🏆 The 9 Capstone Projects Portfolio
+## 🏆 My 9 Projects
 
-Each project is architected with industry-standard practices: dedicated datasets, Jupyter notebooks for exploratory data analysis, reusable modular Python scripts (`src/`), saved trained models (`models/`), and web deployment interfaces (`app.py` / Flask / Django).
+Each project has its own folder containing the dataset, a Jupyter Notebook where I explored the data, the Python scripts, the trained model, and a simple web interface to test it.
 
-| # | Project Name | Domain | Core AI/ML Technologies | Deployment / UI | Key Highlights |
-|---|---|---|---|---|---|
-| **01** | [**Used Bike Price Prediction**](./Projects/Project_1_Bike_Price_Prediction) | Automotive / E-Commerce | Random Forest, Extra Trees, Linear Reg | **Flask Web App** (`app.py`) | Predicts resale value of used motorcycles based on mileage, age, brand, and engine capacity. |
-| **02** | [**Population Growth Forecasting**](./Projects/Project_2_Population_Growth_Forecasting) | Demographics / Time-Series | Polynomial Regression, Time-Series | **Jupyter Analytics** | Analyzes historical census trends to project future urban and rural demographic shifts. |
-| **03** | [**Movie Recommendation Engine**](./Projects/Project_3_Movie_Recommendation_System) | Entertainment / RecSys | Cosine Similarity, TF-IDF, NLP | **Django Web App** | Content-based recommendation engine suggesting movies based on plot tags, actors, and directors. |
-| **04** | [**Stock Price Prediction**](./Projects/Project_4_Stock_Price_Prediction) | Finance / FinTech | Deep Learning (LSTM), RNN | **Streamlit App** | Multi-layer LSTM neural network forecasting stock market closing prices with interactive charts. |
-| **05** | [**Regression Model Benchmarking**](./Projects/Project_5_ML_Project) | Statistical Modeling | Ridge, Lasso, ElasticNet, Polynomial | **Scikit-Learn Pipeline** | Comprehensive comparative analysis of regularization techniques on multi-variable regression. |
-| **06** | [**Optical Character Recognition (OCR)**](./Projects/Project_6_Text_Recognizer) | Computer Vision | Tesseract OCR, OpenCV, Image Proc | **Python Scripting** | Extracts machine-encoded text from scanned documents, invoices, and natural scene images. |
-| **07** | [**Customer Churn Prediction**](./Projects/Project_7_Deep_Learning_Churn_Prediction) | Telecom / CRM | Logistic Reg, Random Forest, MLP Neural Net | **CLI / Standalone App** | Identifies at-risk telecom customers using classic ML and deep neural networks with 84%+ accuracy. |
-| **08** | [**Retail Sales Executive Dashboard**](./Projects/Project_8_Retail_Sales_Dashboard) | Retail / Business Intelligence | EDA, KPI Metrics, Aggregation | **Streamlit Dashboard** | Real-time interactive executive dashboard with category filtering, geographical heatmaps, and ROI KPIs. |
-| **09** | [**Credit Card Fraud Detection**](./Projects/Project_9_Credit_Card_Fraud_Detection) | Cybersecurity / FinTech | Random Forest, Imbalanced Learning (SMOTE) | **CLI / Standalone App** | High-precision fraud detection engine achieving 99% accuracy on highly imbalanced transaction data. |
-
----
-
-## 📅 Part 1: GRASS SITP 45-Day Training Roadmap
-
-### Phase 1 — Python Core & Object-Oriented Programming (Days 1–8)
-* **Days 1–3**: Variables, Memory referencing, Type casting, Arithmetic/Logical operators, Conditional branching.
-* **Days 4–6**: Advanced Functions (`*args`, `**kwargs`, lambda, recursion), Dictionaries, Modules & File I/O.
-* **Days 7–8**: Object-Oriented Programming (Classes, Instances, Encapsulation, Polymorphism, Inheritance).
-
-### Phase 2 — Data Manipulation & Visualization (Days 9–19)
-* **Days 9–13**: NumPy multidimensional arrays, vectorized operations, Pandas DataFrames, indexing, merging, grouping.
-* **Days 14–19**: Exploratory Data Analysis (EDA), Data cleaning, missing value imputation, Matplotlib & Seaborn visualization.
-
-### Phase 3 — Machine Learning & Analytics Projects (Days 20–34)
-* **Days 20–25**: Supervised Learning algorithms (Linear Regression, Logistic Regression, Decision Trees, KNN).
-* **Days 26–30**: Model evaluation metrics (ROC-AUC, Precision-Recall, F1-Score, MSE, R2), Cross-validation, GridSearch.
-* **Days 31–34**: Capstone dashboard building with Streamlit, E-Commerce sales analytics, and Diamond price prediction.
+| # | Project Name | What I Built & Learned |
+|---|---|---|
+| **01** | [**Used Bike Price Prediction**](./Projects/Project_1_Bike_Price_Prediction) | Built a Flask web app that uses an Extra Trees Regressor to predict the resale price of motorcycles based on their age and mileage. |
+| **02** | [**Population Growth Forecasting**](./Projects/Project_2_Population_Growth_Forecasting) | Used Polynomial Regression to analyze historical census data and forecast future population trends. |
+| **03** | [**Movie Recommendation Engine**](./Projects/Project_3_Movie_Recommendation_System) | Created a Django web app that recommends movies based on plot tags and actors using TF-IDF and Cosine Similarity. |
+| **04** | [**Stock Price Prediction**](./Projects/Project_4_Stock_Price_Prediction) | Trained a Deep Learning LSTM model to forecast stock closing prices and built an interactive Streamlit app for visualization. |
+| **05** | [**Regression Model Benchmarking**](./Projects/Project_5_ML_Project) | Compared different regression techniques (Ridge, Lasso, ElasticNet) to see which performed best on a multi-variable dataset. |
+| **06** | [**Optical Character Recognition (OCR)**](./Projects/Project_6_Text_Recognizer) | Used Tesseract OCR and OpenCV to extract text from images and scanned documents. |
+| **07** | [**Customer Churn Prediction**](./Projects/Project_7_Deep_Learning_Churn_Prediction) | Built a Neural Network model to identify telecom customers who are likely to leave the service. |
+| **08** | [**Retail Sales Executive Dashboard**](./Projects/Project_8_Retail_Sales_Dashboard) | Created an interactive business dashboard in Streamlit to explore retail sales data and visualize key metrics. |
+| **09** | [**Credit Card Fraud Detection**](./Projects/Project_9_Credit_Card_Fraud_Detection) | Used Random Forest and SMOTE to detect fraudulent transactions in a highly imbalanced dataset. |
 
 ---
 
-## 🛠️ Complete Technical Stack
+## 📅 What I Learned (45-Day Training)
 
-| Category | Technologies & Tools |
+### Phase 1 — Python Core (Days 1–8)
+* Variables, loops, functions, lists, and dictionaries.
+* Object-Oriented Programming (Classes, Inheritance).
+
+### Phase 2 — Data Analysis (Days 9–19)
+* Using NumPy for arrays and math.
+* Using Pandas for cleaning data and handling missing values.
+* Creating plots and charts with Matplotlib and Seaborn.
+
+### Phase 3 — Machine Learning (Days 20–34)
+* Training models like Linear Regression, Decision Trees, and KNN.
+* Evaluating models using accuracy, MSE, and F1-scores.
+* Building simple web apps using Streamlit to show off my models.
+
+---
+
+## 🛠️ Technologies Used
+
+| Category | Tools I Used |
 |---|---|
-| **Programming Languages** | Python 3.10+, HTML5, CSS3, JavaScript |
-| **Data Processing & EDA** | Pandas, NumPy, SciPy |
-| **Data Visualization** | Matplotlib, Seaborn, Plotly, Streamlit Charts |
-| **Machine Learning** | Scikit-Learn, XGBoost, LightGBM, Statsmodels |
-| **Deep Learning & CV** | TensorFlow, Keras, OpenCV, PyTesseract |
+| **Programming** | Python 3.10+, HTML, CSS |
+| **Data Analysis** | Pandas, NumPy |
+| **Visualization** | Matplotlib, Seaborn, Streamlit |
+| **Machine Learning** | Scikit-Learn |
+| **Deep Learning** | TensorFlow, Keras, OpenCV |
 | **Web Frameworks** | Streamlit, Flask, Django |
-| **Development & DevOps** | Git, GitHub, Jupyter Notebooks, VS Code, Pickle / Joblib |
 
 ---
 
@@ -125,13 +124,13 @@ streamlit run app.py
 
 ---
 
-## 👨‍💻 Author & Acknowledgements
+## 👨‍💻 Author
 
 * **Author**: Anjali saini
 * **Program**: Summer Internship Training Program (SITP) in Data Science, AI & Machine Learning
-* **Mentorship & Organization**: GRRAS Solutions Pvt. Ltd.
+* **Mentorship**: GRRAS Solutions Pvt. Ltd.
 
 ---
 <p align="center">
-  <i>Engineered with excellence for real-world artificial intelligence and data science deployment.</i>
+  <i>A portfolio showcasing my learning journey in data science and AI.</i>
 </p>

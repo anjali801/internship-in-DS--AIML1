@@ -1,4 +1,4 @@
-# 🏍️ Project 1: Used Bike Price Prediction Engine
+# 🏍️ Project 1: Used Bike Price Prediction
 
 <p align="left">
   <img src="https://img.shields.io/badge/ML-Regression-orange?style=for-the-badge" />
@@ -6,37 +6,30 @@
   <img src="https://img.shields.io/badge/Model-ExtraTreesRegressor-blue?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-The **Used Bike Price Prediction Engine** is a machine learning web application designed to estimate the fair market resale value of pre-owned motorcycles. By analyzing key vehicle parameters such as mileage, age, brand, engine displacement, and previous ownership history, the system provides accurate price forecasts for sellers and buyers.
+## 📋 Project Overview
+For this project, I built a machine learning web app to predict the resale price of used bikes. I used a dataset of over 32,000 motorcycles to train my model. Users can input details like the bike's age, mileage, and brand to get an estimated price.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_1_Bike_Price_Prediction/
-├── app.py                     # Flask web server and routing API
-├── Used_Bikes.csv             # Raw dataset (32,000+ motorcycle records)
-├── bike_price_model.pkl       # Serialized ExtraTreesRegressor model
+├── app.py                     # The Flask web app script
+├── Used_Bikes.csv             # Dataset I used for training
+├── bike_price_model.pkl       # My saved trained model
 ├── templates/
-│   └── index.html             # Responsive HTML user interface
-├── static/                    # CSS stylesheets and UI assets
-└── README.md                  # Project documentation
+│   └── index.html             # The frontend webpage
+├── static/                    # CSS for the webpage
+└── README.md                  # This file
 ```
 
 ---
 
-## 🧠 Machine Learning Methodology
-1. **Data Preprocessing**: Cleaned raw motorcycle listings, handled missing numerical values, and encoded categorical features (Brand, Ownership type).
-2. **Feature Engineering**: Extracted vehicle age from model year and created normalized mileage-per-year ratios.
-3. **Model Selection**: Evaluated Linear Regression, Decision Trees, Random Forests, and **Extra Trees Regressor**.
-4. **Model Deployment**: The best-performing model (`ExtraTreesRegressor`) was serialized into `bike_price_model.pkl` and integrated with a lightweight Flask web application.
-
-### Model Performance Benchmarks
-| Algorithm | R² Score | Mean Absolute Error (MAE) |
-|---|---|---|
-| Linear Regression | 0.72 | ₹ 8,450 |
-| Random Forest Regressor | 0.88 | ₹ 3,210 |
-| **Extra Trees Regressor (Selected)** | **0.91** | **₹ 2,680** |
+## 🧠 What I Did
+1. **Data Cleaning**: I cleaned the dataset, handled missing values, and converted text data (like Brand) into numbers.
+2. **Feature Engineering**: I calculated the age of the bike from its manufacturing year.
+3. **Training Models**: I tested Linear Regression, Random Forest, and Extra Trees. 
+4. **Final Model**: The **Extra Trees Regressor** gave the best result with an R² score of 0.91, so I deployed it using Flask!
 
 ---
 
@@ -54,4 +47,4 @@ python app.py
 
 ### 3. Access the Web App
 Open your browser and navigate to: `http://127.0.0.1:5000`
-Input the bike's details (e.g., *Royal Enfield, 350cc, 2018 model, 15,000 kms*) to receive an instant valuation.
+Input the bike's details (e.g., *Royal Enfield, 350cc, 2018 model, 15,000 kms*) to see the prediction.

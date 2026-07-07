@@ -1,4 +1,4 @@
-# 🧪 Project 5: Comparative Benchmarking of Regression Architectures
+# 🧪 Project 5: Comparing Regression Models
 
 <p align="left">
   <img src="https://img.shields.io/badge/ML-Supervised%20Regression-orange?style=for-the-badge" />
@@ -6,31 +6,31 @@
   <img src="https://img.shields.io/badge/Tool-Scikit--Learn-yellow?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-This rigorous empirical study compares advanced regression techniques on complex, multi-variable datasets. The project explores the mathematical underpinnings of **Ordinary Least Squares (OLS)**, **Ridge ($L_2$ Regularization)**, **Lasso ($L_1$ Regularization)**, **ElasticNet**, and **Polynomial Regression**, highlighting how regularization combats multicollinearity and overfitting in high-dimensional feature spaces.
+## 📋 Project Overview
+In this project, I explored different Regression algorithms to see how they handle complex datasets. I compared simple Linear Regression with Ridge, Lasso, ElasticNet, and Polynomial Regression. My goal was to understand how "regularization" helps prevent models from overfitting.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_5_ML_Project/
-├── regression_benchmarks.ipynb # End-to-end mathematical & coding evaluation
-├── dataset.csv                 # High-dimensional multi-variable regression data
-├── comparative_plots/          # Residual distributions and weight decay graphs
-└── README.md                   # Project documentation
+├── regression_benchmarks.ipynb # My notebook with all the code and comparisons
+├── dataset.csv                 # The dataset I used
+├── comparative_plots/          # Graphs showing my results
+└── README.md                   # This file
 ```
 
 ---
 
-## 📊 Comparative Performance Matrix
+## 📊 What I Discovered
 
-| Regression Model | Penalty Type | Best Hyperparameters | Test R² Score | RMSE | Key Takeaway |
-|---|---|---|---|---|---|
-| **Linear Regression (OLS)** | None | N/A | 0.764 | 4.12 | Prone to variance when collinear features exist. |
-| **Ridge Regression** | $L_2$ Norm ($lpha \sum w_i^2$) | $lpha = 10.0$ | 0.821 | 3.45 | Successfully shrinks redundant feature coefficients. |
-| **Lasso Regression** | $L_1$ Norm ($lpha \sum \|w_i\|$) | $lpha = 0.1$ | 0.818 | 3.48 | Performs automatic feature selection by zeroing out noisy coefficients. |
-| **ElasticNet** | $L_1 + L_2$ Combined | $lpha = 0.5, l_1\_ratio = 0.5$ | **0.835** | **3.21** | Optimal balance between stability and sparsity. |
-| **Polynomial Reg (Deg 2)** | None | Degree = 2 | 0.795 | 3.80 | Captures non-linear interactions but increases model complexity. |
+| Model | What I Learned | Best R² Score |
+|---|---|---|
+| **Linear Regression** | Very basic, but struggles when features are highly correlated. | 0.764 |
+| **Ridge Regression** | Reduces the impact of less important features using L2 penalty. | 0.821 |
+| **Lasso Regression** | Automatically ignores useless features entirely using L1 penalty. | 0.818 |
+| **ElasticNet** | A good balance of both Ridge and Lasso. **This was my best model.** | **0.835** |
+| **Polynomial Regression** | Good for curved data, but can easily become too complex. | 0.795 |
 
 ---
 

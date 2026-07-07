@@ -6,32 +6,32 @@
   <img src="https://img.shields.io/badge/Algorithm-Cosine%20Similarity-blue?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-The **Movie Recommendation Engine** is a full-stack Django web application that provides personalized movie recommendations. Using Natural Language Processing (NLP) and vector space modeling, the engine analyzes movie synopses, genres, cast members, and directors to compute semantic similarities and suggest films tailored to user preferences.
+## 📋 Project Overview
+In this project, I built a movie recommendation web app using Django. I used Natural Language Processing (NLP) techniques to analyze over 5,000 movies. By looking at a movie's plot, genres, cast, and director, the app suggests similar movies that a user might enjoy.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_3_Movie_Recommendation_System/
-├── manage.py                  # Django command-line utility
-├── movie_recsys/              # Django core application settings & URLs
-├── recommendation_engine/     # Recommendation logic and views
+├── manage.py                  # Django script to run the server
+├── movie_recsys/              # Django settings
+├── recommendation_engine/     # The logic for recommendations
 ├── data/
-│   ├── tmdb_5000_movies.csv   # Movie metadata and plot synopses
-│   └── tmdb_5000_credits.csv  # Cast and crew information
-├── static/                    # Frontend UI stylesheets and scripts
-├── templates/                 # HTML UI templates for movie search & results
-└── README.md                  # Project documentation
+│   ├── tmdb_5000_movies.csv   # Dataset with movie plots
+│   └── tmdb_5000_credits.csv  # Dataset with actors and directors
+├── static/                    # CSS for the website
+├── templates/                 # HTML templates
+└── README.md                  # This file
 ```
 
 ---
 
-## 🧠 Algorithmic Methodology
-1. **Metadata Construction**: Extracted keywords, top 3 cast members, director names, and genres for over 5,000 films.
-2. **Text Vectorization**: Applied **TF-IDF (Term Frequency-Inverse Document Frequency)** and Count Vectorization to transform textual tags into multi-dimensional feature vectors.
-3. **Similarity Matrix**: Computed the **Cosine Similarity** score across all movie vectors to measure angular distance between films in feature space.
-4. **Real-Time Querying**: When a user selects a movie, the engine retrieves the top $N$ movies with the highest cosine similarity score instantly.
+## 🧠 What I Learned
+1. **Extracting Features**: I combined important details like cast members, director names, and plot keywords into a single text block for each movie.
+2. **Text Vectorization (TF-IDF)**: I learned how to convert this text into numbers so the computer can understand it using Count Vectorization.
+3. **Cosine Similarity**: I used this math concept to measure how similar two movies are based on their numbers.
+4. **Django**: I learned how to build a backend web application to display my results!
 
 ---
 
@@ -42,7 +42,7 @@ Project_3_Movie_Recommendation_System/
 pip install django pandas numpy scikit-learn
 ```
 
-### 2. Apply Database Migrations & Start Server
+### 2. Start the Server
 ```bash
 python manage.py migrate
 python manage.py runserver
@@ -50,4 +50,4 @@ python manage.py runserver
 
 ### 3. Access the Web App
 Open your browser and navigate to: `http://127.0.0.1:8000`
-Search for any title (e.g., *Inception*, *The Dark Knight*, *Interstellar*) to discover top recommendation matches.
+Search for a title (like *Inception* or *The Dark Knight*) to see my recommendations.

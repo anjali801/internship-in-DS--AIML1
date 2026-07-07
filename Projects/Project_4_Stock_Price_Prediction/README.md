@@ -1,4 +1,4 @@
-# 📈 Project 4: Deep Learning Stock Price Prediction Engine
+# 📈 Project 4: Deep Learning Stock Price Prediction
 
 <p align="left">
   <img src="https://img.shields.io/badge/Deep%20Learning-LSTM%20%2F%20RNN-red?style=for-the-badge" />
@@ -6,32 +6,31 @@
   <img src="https://img.shields.io/badge/Domain-FinTech-blue?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-Financial markets are notoriously volatile and complex. This project builds a **Long Short-Term Memory (LSTM)** neural network capable of capturing long-term temporal dependencies in historical stock market data to forecast closing prices. Integrated with an interactive **Streamlit dashboard**, users can visualize moving averages, trend indicators, and future price trajectories in real time.
+## 📋 Project Overview
+For this project, I built a Deep Learning model to predict stock market prices. I used an LSTM (Long Short-Term Memory) neural network to analyze historical stock data and forecast future closing prices. I also built a Streamlit web app to visualize the predictions interactively.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_4_Stock_Price_Prediction/
-├── app.py                     # Streamlit interactive web dashboard
-├── stock_model_lstm.h5        # Trained Keras LSTM deep learning model
+├── app.py                     # The Streamlit web dashboard
+├── stock_model_lstm.h5        # My trained LSTM model
 ├── data/
-│   └── historical_stock_data.csv # Multi-year daily stock price records
+│   └── historical_stock_data.csv # Dataset of daily stock prices
 ├── notebooks/
-│   └── LSTM_Training.ipynb    # Deep learning architecture exploration
-└── README.md                  # Project documentation
+│   └── LSTM_Training.ipynb    # Where I trained the neural network
+└── README.md                  # This file
 ```
 
 ---
 
-## 🧠 Deep Learning Architecture (LSTM)
-* **Sequence Windowing**: Data is formatted into 60-day sliding time windows ($X_{t-60} \dots X_{t-1}$) to predict day $X_t$.
-* **Network Layers**:
-  * Layer 1: LSTM (50 units, return sequences = True) + Dropout (0.2)
-  * Layer 2: LSTM (50 units, return sequences = False) + Dropout (0.2)
-  * Layer 3: Dense Output Layer (1 unit, Linear activation for continuous price estimation)
-* **Optimization**: Trained using the **Adam optimizer** and **Mean Squared Error (MSE)** loss function over 50 epochs.
+## 🧠 What I Did (LSTM)
+* **Time Windows**: I trained the model to look at the past 60 days of stock prices to predict the price for the next day.
+* **Building the Neural Network**: 
+  * I used two LSTM layers (with 50 units each) and added Dropout layers to prevent overfitting.
+  * The final output is a Dense layer predicting a single price value.
+* **Training**: I used the Adam optimizer and Mean Squared Error (MSE) to train the model over 50 epochs.
 
 ---
 
@@ -46,4 +45,4 @@ pip install streamlit tensorflow keras pandas numpy matplotlib scikit-learn yfin
 ```bash
 streamlit run app.py
 ```
-Open your browser at `http://localhost:8501`, input any stock ticker symbol (e.g., `AAPL`, `GOOGL`, `TCS.NS`), and explore interactive price predictions.
+Open your browser at `http://localhost:8501` and enter a stock ticker (like `AAPL` or `GOOGL`) to see the predictions.

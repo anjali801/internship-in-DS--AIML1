@@ -1,4 +1,4 @@
-# 🛡️ Project 9: Credit Card Fraud Detection Engine
+# 🛡️ Project 9: Credit Card Fraud Detection
 
 <p align="left">
   <img src="https://img.shields.io/badge/Domain-Cybersecurity%20%2F%20FinTech-red?style=for-the-badge" />
@@ -6,42 +6,35 @@
   <img src="https://img.shields.io/badge/Accuracy-99.0%25%2B-success?style=for-the-badge" />
 </p>
 
-## 📋 Executive Overview
-Financial transaction networks face billions of legitimate credit card swipes daily alongside a tiny fraction of fraudulent attempts. The **Credit Card Fraud Detection Engine** addresses the extreme class imbalance challenge (~99.8% legitimate vs. ~0.2% fraudulent) using advanced feature normalization, ensemble decision trees, and classification algorithms optimized for precision and recall.
+## 📋 Project Overview
+For this project, I built a machine learning model to detect fraudulent credit card transactions. The biggest challenge was dealing with highly imbalanced data (only 0.2% of transactions were actually fraud). I learned how to use techniques like SMOTE and Random Forests to handle this imbalance.
 
 ---
 
-## 🗂️ Directory Architecture
+## 🗂️ Project Files
 ```
 Project_9_Credit_Card_Fraud_Detection/
 ├── data/
-│   └── creditcard_sampled.csv # Transaction dataset with PCA-anonymized features (V1-V28)
+│   └── creditcard_sampled.csv # The transaction dataset
 ├── notebooks/
-│   ├── Fraud_EDA.ipynb        # Class imbalance visualization & transaction distributions
-│   └── Fraud_Model_Training.ipynb # Precision-Recall curves, ROC-AUC, and feature importance
+│   ├── Fraud_EDA.ipynb        # My data exploration
+│   └── Fraud_Model_Training.ipynb # Model training and tuning
 ├── src/
-│   ├── train.py               # Automated model training and evaluation script
-│   └── predict.py             # Live transaction risk scoring inference script
+│   ├── train.py               # Script to train the model
+│   └── predict.py             # Script to test the model
 ├── models/
-│   ├── fraud_model.pkl        # Serialized Random Forest fraud classifier
-│   └── fraud_scaler.pkl       # Fitted StandardScaler for transaction amounts
+│   ├── fraud_model.pkl        # My saved Random Forest model
+│   └── fraud_scaler.pkl       # Scaler used for amounts
 ├── requirements.txt           # Dependencies
-└── README.md                  # Project documentation
+└── README.md                  # This file
 ```
 
 ---
 
-## 🧠 Tackling Extreme Class Imbalance
-In fraud detection, standard overall accuracy is misleading (predicting "No Fraud" every time yields 99.8% accuracy but catches zero criminals). This project prioritizes:
-1. **Stratified Sampling**: Ensuring exact class ratios are preserved across training and validation splits.
-2. **Feature Scaling**: Standardizing transaction monetary values (`Amount`) using `StandardScaler` to prevent high-value transactions from skewing decision boundaries.
-3. **Evaluation Metrics**: Focusing strictly on **Precision** (minimizing false customer freeze alerts), **Recall** (catching real fraud attempts), and the **Precision-Recall Area Under Curve (PR-AUC)**.
-
-### Model Performance Benchmarks
-| Algorithm | Overall Accuracy | Fraud Precision | Fraud Recall | F1-Score |
-|---|---|---|---|---|
-| Logistic Regression (Baseline) | 98.5% | 0.75 | 0.96 | 0.84 |
-| **Random Forest Classifier** | **99.9%** | **0.95** | **0.80** | **0.87** |
+## 🧠 What I Learned
+1. **Handling Imbalanced Data**: A model predicting "No Fraud" every time gets 99.8% accuracy, which is useless! I learned that evaluating models based on **Precision** and **Recall** is much more important here.
+2. **Feature Scaling**: I used `StandardScaler` on the transaction amounts so they wouldn't skew the results.
+3. **Best Model**: My Random Forest Classifier achieved **99.9% accuracy** with a fraud recall of 80% (meaning it successfully caught 80% of all fraudulent transactions).
 
 ---
 
@@ -52,14 +45,14 @@ In fraud detection, standard overall accuracy is misleading (predicting "No Frau
 pip install -r requirements.txt
 ```
 
-### 2. Train the Fraud Classifier
+### 2. Train the Model
 ```bash
 python src/train.py
 ```
-Ingests transaction records, trains Logistic Regression and Random Forest classifiers, generates detailed classification reports, and exports serialized models to `models/`.
+This script will train the models and save the best one into the `models/` folder.
 
-### 3. Score Transactions Real-Time
+### 3. Test Predictions
 ```bash
 python src/predict.py
 ```
-Simulates real-time transaction monitoring, printing instantaneous fraud probability percentages and risk flags.
+This simulates a real-time transaction check and prints out whether it was flagged as fraud.
