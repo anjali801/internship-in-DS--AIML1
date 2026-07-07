@@ -99,7 +99,7 @@ Each project is architected with industry-standard practices: dedicated datasets
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/donyadav9109-source/Data-science-AI-ML-SITP.git
+git clone https://github.com/anjali801/internship-in-DS--AIML1.git
 cd Data-science-AI-ML-SITP
 ```
 
@@ -126,7 +126,7 @@ streamlit run app.py
 
 ## 👨‍💻 Author & Acknowledgements
 
-* **Author**: Harsh Yadav
+* **Author**: Anjali saini
 * **Program**: Summer Internship Training Program (SITP) in Data Science, AI & Machine Learning
 * **Mentorship & Organization**: GRRAS Solutions Pvt. Ltd.
 
